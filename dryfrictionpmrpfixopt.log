@@ -1,0 +1,102 @@
+                  ___                
+This is MUSCOD-II (Release 6.0, Revision unknown) |\    /| |    | /   \ 000000        
+Copyright (C) 1995--2016, Simulation and Optimization Group |  \/  | |    | `---.       000     
+ |      |  \__/  \___/          00   
+Interdisciplinary Center for Scientific Computing (IWR)                                  00 
+Heidelberg University, Germany 00               | |              00
+ 00               | |              00
+ + MS-MINTOC extensions for mixed-integer optimal control  00              ___    ___    ___  
+ + PRSQP Partially Reduced SQP Version [ ]    00           /   \  /   \  |   \ 
+ + Algorithmic Extensions [ CLSQ LSQ ]      000       |      |     | |    |
+ + DEBUG enabled         000000  \___/  \___/  |___/ 
+
+Loading the following libraries dynamically:
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_prsqp_den.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_hess_update.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_tchk.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_solve_slse.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_cond_std.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_qps_qpopt.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mssqp_standard.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_plot_pgplot.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_eval_ind.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mintoc.so ... success.
+./SRC/libdryfrictionpmrpfixopt.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+*** WARNING ***
+MSSQP/check_CPInfo(): ematch_i(11)[0] has illegal value
+(match ignored)
+*** WARNING ***
+MSSQP/check_CPInfo(): ematch_i(11)[1] has illegal value
+(match ignored)
+*** WARNING ***
+MSSQP/check_CPInfo(): ematch_i(11)[2] has illegal value
+(match ignored)
+*** WARNING ***
+MSSQP/ini_MSSQP(): 3 value(s) replaced/ignored in CPInfo
+
+>>>>  Dimensions of structured NLP problem:
+                   # of discretization points NDIS =        13
+                               # of variables NVAR =       199
+                    # of equality constraints NEQ  =       119 (59 + 60)
+                  # of inequality constraints NIN  =       443 (45 + 199*2)
+
+>>>>  Parameters of MSSQP method:
+                final accuracy of NLP solution ACC =  1.00E-07
+                 initial integration tolerance     =  1.00E-09
+  # of homotopy steps in integration tolerance     =         0
+                   final integration tolerance TOL =  1.00E-09
+    regularization factor (as multiple of ACC)     =  0.00E+00
+    Levenberg Marquardt hessian regularization     =  0.00E+00
+                   maximum # of SQP iterations     =      1000
+(no constraint relaxation)
+
+>>>>  Parameters of Hessian approximation method (BFGS update with Powell modification):
+                              initial trust radius =   2691.65
+                   initial diagonal scaling factor = 0.00100321
+
+>>>>  SQP iterations
+
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|    alpha         merit crit stat
+  0                    3.000000E+02 1.09E+04
+
+
+****
+**** SQP iteration 0
+****
+(no constraint relaxation)
+  1   82 A   3.19E+02  1.314736E+02 7.69E+02 1.37E+03 0.00E+00 1.97E+01 2.338536E+00 1.00E+00  1.899244E+03  REL SUCC
+
+
+****
+**** SQP iteration 1
+****
+(no constraint relaxation)
+  2   55 A   1.46E+02  1.950130E+02 3.50E+02 1.17E+03 0.00E+00 3.40E+01 1.580060E+01 1.00E+00  8.448196E+02  STD SUCC
+
+
+****
+**** SQP iteration 2
+****
+
+****  terminated due to an error  ****
+
+>>>>  Operation counts for ODE solver RKF45S:
+                   total # of function evaluations =     41813
+                      total # of integration steps =       626
+                         total # of rejected steps =        36
+
+>>>>  Wall time statistics:
+                      Sensitivity generation (IND) = 00:00.006 ( 1.70%)
+                      Integration of inhomogeneity = 00:00.000 ( 0.00%)
+                                 State integration = 00:00.000 ( 0.06%)
+                              Constraint reduction = 00:00.000 ( 0.02%)
+                                        Condensing = 00:00.003 ( 0.75%)
+                         Solution of condensed QPs = 00:00.018 ( 4.78%)
+                            Remaining calculations = 00:00.343 (92.69%)
+                                             Total = 00:00.370
+
+                                   Online graphics = 00:00.029 ( 7.29%)
+                                       Grand Total = 00:00.399

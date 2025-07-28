@@ -1,0 +1,286 @@
+*  MUSCOD_SUITE/Apps/TEST/Src/DAT/dryfrictionpmrp.dat
+*  (c) Tran, Bao Duy, Juyl 2025 (corrected)
+*  Switched OCP with Dry Friction
+*  a point mass on a rough plane
+*  GDP & relaxation epsilon
+
+*  # of multiple shooting intervals on each model stage
+nshoot
+0: 50
+1: 50
+2: 50
+
+*  model stage duration start values, scale factors, and bounds
+h
+0: 10
+1: 10
+2: 10
+
+h_sca
+0: 0.1
+1: 0.1
+2: 0.1
+
+h_min
+0: 0.0
+1: 0.0
+2: 0.0
+
+h_max
+0: 20
+1: 20
+2: 20
+
+
+*  model stage duration fixed value flags
+h_fix
+0: 0
+1: 0
+2: 0
+
+
+*  differential state start values, scale factors, and bounds
+sd(*,*)
+0: 10.0
+1: 1.0
+2: 10.0
+3: 5.0
+
+sd_sca(*,*)
+0: 0.1
+1: 0.1
+2: 0.05
+3: 0.05
+
+sd_min(*,*)
+0: -10.0
+1: -10.0
+2: -10.0
+3: -10.0
+
+sd_max(*,*)
+0: 100
+1: 20
+2: 50
+3: 50
+
+*  control parameterization types 
+u_type(*)
+0: 2
+1: 2
+2: 2
+3: 1
+4: 1
+5: 1
+
+*  control start values, scale factors, and bounds
+u(*,*)
+0: 9.0
+1: 3.0
+2: 3.16227766
+3: 0.0
+4: 0.0
+5: 1.0
+
+u_sca(*,*)
+0: 0.1
+1: 0.1
+2: 0.1
+3: 0.01
+4: 0.01
+5: 0.01
+
+u_min(0,*)
+0: 0.0
+1: 0.0
+2: 0.0
+3: 0.0
+4: 0.0
+5: 0.0
+
+u_max(0,*)
+0: 10.0
+1: 10.0
+2: 9.8
+3: 1.0
+4: 1.0
+5: 1.0
+
+u_min(1,*)
+0: 0.0
+1: 0.0
+2: 0.0
+3: 0.0
+4: 0.0
+5: 0.0
+
+u_max(1,*)
+0: 10.0
+1: 10.0
+2: 9.8
+3: 1.0
+4: 1.0
+5: 1.0
+
+u_min(2,*)
+0: 0.0
+1: 0.0
+2: 0.0
+3: 0.0
+4: 0.0
+5: 0.0
+
+u_max(2,*)
+0: 10.0
+1: 10.0
+2: 9.8
+3: 1.0
+4: 1.0
+5: 1.0
+
+
+*  decoupled i.p.c. scale factors
+rd_sca(*,S)
+0: 0.01
+1: 0.01
+2: 0.01
+3: 0.01
+
+rd_sca(*,E)
+0: 0.01
+1: 0.01
+2: 0.01
+3: 0.01
+
+rd_sca(*,I)
+0: 0.01
+1: 0.01 
+2: 0.01
+3: 0.01
+4: 0.01
+5: 0.01
+6: 0.01
+7: 0.01
+8: 0.01
+9: 0.01
+10: 0.01
+11: 0.01
+12: 0.01
+13: 0.01
+14: 0.01
+15: 0.01
+
+*  objective scale and expected range; # of values in history plot
+of_sca
+0.2
+
+of_min
+0.001
+
+of_max
+1000.0
+
+nhist
+50
+
+*plotted functions
+xd_name
+0: x
+1: y
+2: v_x
+3: v_y
+
+u_name
+0: control force f_x
+1: control force f_y
+2: control force f_z
+3: alpha_+
+4: alpha_0
+5: alpha_-
+
+
+**********************
+* Choosing libraries *
+**********************
+
+libmodel
+SRC/libdryfrictionpmrpfixopt
+
+libhessian
+hess_update
+
+libsolve
+solve_slse
+
+libcond
+cond_std
+
+libtchk
+tchk
+
+libmssqp
+mssqp_standard
+
+libeval
+eval_ind
+
+libind
+0: ind_rkf45
+1: ind_rkf45
+2: ind_rkf45
+
+libqps
+qps_qpopt
+
+libplot
+plot_pgplot
+
+**********************************
+* Setting algorithmic parameters *
+**********************************
+
+options_acc
+1e-7
+options_ftol
+-1.0
+options_itol
+-1.0
+options_rfac
+0.0
+options_levmar
+0.0
+options_qp_featol
+1.0e-8
+options_qp_relax
+1.1
+options_nhtopy
+0
+options_frstart
+0
+options_frmax
+0
+options_itmax
+1000
+options_plevel_screen
+0
+options_plevel_file
+1
+options_plevel_matlab
+0
+options_bflag
+-83
+options_qp_itmax
+10000
+options_qp_expand
+99999999
+options_sflag
+0
+options_options_wflag
+0
+options_cflag
+0
+options_output_ps
+1
+options_output_gif
+0
+
