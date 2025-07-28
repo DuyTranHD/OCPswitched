@@ -1,0 +1,124 @@
+                  ___                
+This is MUSCOD-II (Release 6.0, Revision unknown) |\    /| |    | /   \ 000000        
+Copyright (C) 1995--2016, Simulation and Optimization Group |  \/  | |    | `---.       000     
+ |      |  \__/  \___/          00   
+Interdisciplinary Center for Scientific Computing (IWR)                                  00 
+Heidelberg University, Germany 00               | |              00
+ 00               | |              00
+ + MS-MINTOC extensions for mixed-integer optimal control  00              ___    ___    ___  
+ + PRSQP Partially Reduced SQP Version [ ]    00           /   \  /   \  |   \ 
+ + Algorithmic Extensions [ CLSQ LSQ ]      000       |      |     | |    |
+ + DEBUG enabled         000000  \___/  \___/  |___/ 
+
+Loading the following libraries dynamically:
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_prsqp_den.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_hess_update.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_tchk.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_solve_tbox.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_cond_std.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_qps_qpopt.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mssqp_standard.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_plot_pgplot.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_eval_ind.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mintoc.so ... success.
+./SRC/libsimple-test-2.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+
+>>>>  Dimensions of structured NLP problem:
+                   # of discretization points NDIS =        51
+                               # of variables NVAR =       502
+                    # of equality constraints NEQ  =       298 (102 + 196)
+                  # of inequality constraints NIN  =      1494 (490 + 502*2)
+
+>>>>  Parameters of MSSQP method:
+                final accuracy of NLP solution ACC =  1.00E-06
+                 initial integration tolerance     =  1.00E-08
+  # of homotopy steps in integration tolerance     =         0
+                   final integration tolerance TOL =  1.00E-08
+    regularization factor (as multiple of ACC)     =  0.00E+00
+    Levenberg Marquardt hessian regularization     =  0.00E+00
+                   maximum # of SQP iterations     =       100
+(no constraint relaxation)
+
+>>>>  Parameters of Hessian approximation method (BFGS update with Powell modification):
+                              initial trust radius =   30.1463
+                   initial diagonal scaling factor =  0.107061
+
+>>>>  SQP iterations
+
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|     trad tact         merit crit stat
+  0                    2.500000E+01 0.00E+00
+
+
+****
+**** SQP iteration 0
+****
+(no constraint relaxation)
+  1   99 A   6.92E-01  2.432556E+01 7.56E-08 2.54E+00 0.00E+00 1.78E+01 2.795085E+00 1.00E+00    0  2.432556E+01  REL SUCC
+
+
+****
+**** SQP iteration 1
+****
+(no constraint relaxation)
+RECALC_QP (1 of max 5; number of possible active bounds sd = 18, sa = 0)
+(no constraint relaxation)
+(no constraint relaxation)
+  2  318 AP  2.65E+00  2.198727E+01 3.21E-07 1.04E+01 0.00E+00 2.54E+00 3.257774E-01 2.00E+00    3  2.198727E+01  STD SUCC
+
+
+****
+**** SQP iteration 2
+****
+(no constraint relaxation)
+(no constraint relaxation)
+  3    2  P  4.05E+00  1.919243E+01 5.21E-07 2.07E+01 0.00E+00 1.66E+00 1.503269E-01 4.00E+00    3  1.919244E+01  STD SUCC
+update skipped on block 50
+
+
+****
+**** SQP iteration 3
+****
+(no constraint relaxation)
+  4    2 AP  5.39E-01  1.881844E+01 5.85E-08 7.48E+00 0.00E+00 3.99E-01 6.729965E-02 4.00E+00    0  1.881844E+01  STD SUCC
+
+
+****
+**** SQP iteration 4
+****
+(no constraint relaxation)
+  5    1  P  7.71E-04  1.881801E+01 1.98E-09 3.28E-01 0.00E+00 4.84E-02 1.069785E-02 4.00E+00    0  1.881801E+01  STD SUCC
+
+
+****
+**** SQP iteration 5
+****
+(no constraint relaxation)
+  6    1  P  1.51E-05  1.881800E+01 3.13E-10 4.89E-02 0.00E+00 3.64E-02 2.172376E-03 4.00E+00    0  1.881800E+01  STD SUCC
+
+
+****
+**** SQP iteration 6
+****
+(no constraint relaxation)
+  7    1  P  3.45E-09  1.881800E+01 4.87E-12 7.44E-04 0.00E+00 5.65E-04 3.224522E-05 4.00E+00    0  1.881800E+01  STD SUCC
+
+****  convergence achieved  ****
+
+>>>>  Operation counts for ODE solver RKF45S:
+                   total # of function evaluations =     22580
+                      total # of integration steps =       805
+                         total # of rejected steps =         0
+
+>>>>  Wall time statistics:
+                      Sensitivity generation (IND) = 00:00.004 ( 1.29%)
+                      Integration of inhomogeneity = 00:00.000 ( 0.00%)
+                                 State integration = 00:00.001 ( 0.28%)
+                              Constraint reduction = 00:00.000 ( 0.15%)
+                                        Condensing = 00:00.055 (17.06%)
+                         Solution of condensed QPs = 00:00.251 (78.66%)
+                            Remaining calculations = 00:00.008 ( 2.55%)
+                                             Total = 00:00.320
+
+                                   Online graphics = 00:00.116 (26.62%)
+                                       Grand Total = 00:00.436
