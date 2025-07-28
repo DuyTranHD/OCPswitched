@@ -1,0 +1,386 @@
+*  MUSCOD_SUITE/Apps/TEST/Src/DAT/dryfriction1fix1opt.dat
+*  (c) Tran, B Duy, May 2025
+*  Switched OCP with Dry Friction
+*  a system of 3 material points lie along horizontal straight line
+*
+
+*  # of multiple shooting intervals on each model stage
+nshoot
+0: 1
+1: 1
+2: 1
+
+*  model stage duration start values, scale factors, and bounds
+h
+0: 4.0
+1: 7.0
+2: 10.0
+
+h_sca
+0: 0.2
+1: 0.2
+2: 0.2
+
+h_min
+0: 0.0
+1: 0.0
+2: 0.0
+
+h_max
+0: 10.0
+1: 10.0
+2: 10.0
+
+
+*  model stage duration fixed value flags
+h_fix
+0: 1
+1: 1
+2: 1
+
+
+*  differential state start values, scale factors, and bounds
+sd(*,*)
+0: 0.0
+1: 0.0
+2: 0.0
+3: 0.0
+4: 0.0
+5: 0.0
+
+sd_sca(*,*)
+0: 0.1
+1: 0.1
+2: 0.1
+3: 0.1
+4: 0.1
+5: 0.1
+
+sd_min(*,*)
+0: -100.0
+1: -100.0
+2: -100.0
+3: -30.0
+4: -30.0
+5: -30.0
+
+sd_max(*,*)
+0: 100
+1: 100
+2: 100
+3: 20
+4: 20
+5: 20
+
+
+*  control parameterization types 
+u_type(*)
+0: 0
+1: 0
+2: 0
+3: 0
+4: 0
+5: 0
+6: 0
+7: 0
+8: 0
+9: 0
+10: 0
+11: 0
+12: 0
+13: 0
+14: 0
+15: 2
+16: 2
+
+*  control start values, scale factors, and bounds
+u(*,*)
+0: 0.0
+1: 0.0
+2: 0.0
+3: 0.0
+4: 0.0
+5: 0.0
+6: 0.0
+7: 0.0
+8: 0.0
+9: 1.0
+10: 1.0
+11: 1.0
+12: 0.0
+13: 0.0
+14: 0.0
+15: 2.0
+16: 4.0
+
+u_sca(*,*)
+0: 0.1
+1: 0.1
+2: 0.1
+3: 0.1
+4: 0.1
+5: 0.1
+6: 0.1
+7: 0.1
+8: 0.1
+9: 0.1
+10: 0.1
+11: 0.1
+12: 0.1
+13: 0.1
+14: 0.1
+15: 0.1
+16: 0.1
+
+u_min(*,*)
+0: 0.0
+1: 0.0
+2: 0.0
+3: 0.0
+4: 0.0
+5: 0.0
+6: 0.0
+7: 0.0
+8: 0.0
+9: 0.0
+10: 0.0
+11: 0.0
+12: 0.0
+13: 0.0
+14: 0.0
+15: 0.0
+16: 0.0
+
+u_max(*,*)
+0: 1.0
+1: 1.0
+2: 1.0
+3: 1.0
+4: 1.0
+5: 1.0
+6: 1.0
+7: 1.0
+8: 1.0
+9: 1.0
+10: 1.0
+11: 1.0
+12: 1.0
+13: 1.0
+14: 1.0
+15: 40
+16: 50
+
+*  decoupled i.p.c. scale factors
+rd_sca(*,S)
+0: 0.01
+1: 0.01
+2: 0.01
+3: 0.01
+4: 0.01
+5: 0.01
+
+rd_sca(*,E)
+0: 0.01
+1: 0.01
+2: 0.01
+3: 0.01
+4: 0.01
+5: 0.01
+
+rd_sca(*,I)
+0: 0.01
+1: 0.01 
+2: 0.01
+3: 0.01
+4: 0.01
+5: 0.01
+6: 0.01
+7: 0.01
+8: 0.01
+9: 0.01
+10: 0.01
+11: 0.01
+12: 0.01
+13: 0.01
+14: 0.01
+15: 0.01
+16: 0.01
+17: 0.01
+18: 0.01
+19: 0.01
+20: 0.01
+21: 0.01
+22: 0.01
+23: 0.01
+24: 0.01
+25: 0.01
+26: 0.01
+27: 0.01
+28: 0.01
+29: 0.01
+30: 0.01
+31: 0.01
+32: 0.01
+33: 0.01
+34: 0.01
+35: 0.01
+36: 0.01
+37: 0.01
+38: 0.01
+39: 0.01
+40: 0.01
+41: 0.01
+42: 0.01
+43: 0.01
+44: 0.01
+45: 0.01
+46: 0.01
+47: 0.01
+48: 0.01
+49: 0.01
+50: 0.01
+51: 0.01
+52: 0.01
+53: 0.01
+54: 0.01
+55: 0.01
+56: 0.01
+57: 0.01
+58: 0.01
+59: 0.01
+60: 0.01
+61: 0.01
+62: 0.01
+63: 0.01
+64: 0.01
+65: 0.01
+66: 0.01
+67: 0.01
+68: 0.01
+
+*  objective scale and expected range; # of values in history plot
+of_sca
+0.2
+
+of_min
+-100.0
+
+of_max
+10.0
+
+nhist
+50
+
+*plotted functions
+xd_name
+0: x1
+1: x2
+2: x3
+3: velocity v1
+4: velocity v2
+5: velocity v3
+
+u_name
+0: alpha_1,1
+1: alpha_1,2
+2: alpha_1,3
+3: alpha_2,1
+4: alpha_2,2
+5: alpha_2,3
+6: alpha_3,1
+7: alpha_3,2
+8: alpha_3,3
+9: alpha_4,1
+10: alpha_4,2
+11: alpha_4,3
+12: alpha_5,1
+13: alpha_5,2
+14: alpha_5,3
+15: control force f1
+16: control force f2
+
+**********************
+* Choosing libraries *
+**********************
+
+libmodel
+SRC/libdryfriction1fix1
+
+libhessian
+hess_update
+
+libsolve
+solve_slse
+
+libcond
+cond_std
+
+libtchk
+tchk
+
+libmssqp
+mssqp_standard
+
+libeval
+eval_ind
+
+libind
+0: ind_rkf45
+1: ind_rkf45
+2: ind_rkf45
+
+libqps
+qps_qpopt
+
+libplot
+plot_pgplot
+
+**********************************
+* Setting algorithmic parameters *
+**********************************
+
+options_acc
+1e-7
+options_ftol
+-1.0
+options_itol
+-1.0
+options_rfac
+0.0
+options_levmar
+0.0
+options_qp_featol
+1.0e-8
+options_qp_relax
+1.1
+options_nhtopy
+0
+options_frstart
+0
+options_frmax
+0
+options_itmax
+1000
+options_plevel_screen
+0
+options_plevel_file
+1
+options_plevel_matlab
+0
+options_bflag
+-83
+options_qp_itmax
+10000
+options_qp_expand
+99999999
+options_sflag
+0
+options_options_wflag
+0
+options_cflag
+0
+options_output_ps
+1
+options_output_gif
+0
+

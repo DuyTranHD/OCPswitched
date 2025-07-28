@@ -1,0 +1,102 @@
+                  ___                
+This is MUSCOD-II (Release 6.0, Revision unknown) |\    /| |    | /   \ 000000        
+Copyright (C) 1995--2016, Simulation and Optimization Group |  \/  | |    | `---.       000     
+ |      |  \__/  \___/          00   
+Interdisciplinary Center for Scientific Computing (IWR)                                  00 
+Heidelberg University, Germany 00               | |              00
+ 00               | |              00
+ + MS-MINTOC extensions for mixed-integer optimal control  00              ___    ___    ___  
+ + PRSQP Partially Reduced SQP Version [ ]    00           /   \  /   \  |   \ 
+ + Algorithmic Extensions [ CLSQ LSQ ]      000       |      |     | |    |
+ + DEBUG enabled         000000  \___/  \___/  |___/ 
+
+Loading the following libraries dynamically:
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_prsqp_den.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_hess_update.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_tchk.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_solve_tbox.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_cond_std.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_qps_qpopt.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mssqp_standard.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_plot_pgplot.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_eval_ind.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mintoc.so ... success.
+./SRC/libdryfriction1fix1.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkfswt.so ... success.
+*** WARNING ***
+MSSQP/check_CPInfo(): ematch_i(3)[15] has illegal value
+(match ignored)
+*** WARNING ***
+MSSQP/check_CPInfo(): ematch_i(3)[16] has illegal value
+(match ignored)
+*** WARNING ***
+MSSQP/ini_MSSQP(): 2 value(s) replaced/ignored in CPInfo
+
+>>>>  Dimensions of structured NLP problem:
+                   # of discretization points NDIS =         5
+                               # of variables NVAR =       166
+                    # of equality constraints NEQ  =        96 (45 + 51)
+                  # of inequality constraints NIN  =       530 (198 + 166*2)
+
+>>>>  Parameters of MSSQP method:
+                final accuracy of NLP solution ACC =  1.00E-10
+                 initial integration tolerance     =  1.00E-12
+  # of homotopy steps in integration tolerance     =         0
+                   final integration tolerance TOL =  1.00E-12
+    regularization factor (as multiple of ACC)     =  0.00E+00
+    Levenberg Marquardt hessian regularization     =  0.00E+00
+                   maximum # of SQP iterations     =   1000000
+
+>>>>  Parameters of Hessian approximation method (BFGS update with Powell modification):
+                              initial trust radius =   6631.06
+                   initial diagonal scaling factor = 1.74135E-05
+
+>>>>  SQP iterations
+
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|     trad tact         merit crit stat
+  0                   -5.000000E-09 2.68E+04
+
+
+****
+**** SQP iteration 0
+****
+  1  151 A R 9.02E+01 -5.000000E+01 3.39E+03 3.32E+03 0.00E+00 1.24E+01 2.255274E-02 1.00E+00    0 -4.783419E+01  REL SUCC
+
+
+****
+**** SQP iteration 1
+****
+(no constraint relaxation)
+  2   12 A   4.43E-07 -5.000000E+01 4.58E+00 3.42E-01 0.00E+00 7.22E-03 5.773501E-02 1.00E+00    0 -5.000000E+01  STD SUCC
+
+
+****
+**** SQP iteration 2
+****
+(no constraint relaxation)
+  3    0 AP  3.98E-12 -5.000000E+01 4.13E-05 6.79E-04 0.00E+00 1.57E-06 7.608409E-06 1.00E+00    0 -5.000000E+01  STD SUCC
+
+****  convergence achieved  ****
+
+
+
+>>>>  operation counts for ODE solver RKF45SWT:
+
+total # of function evaluations =      22692
+   total # of integration steps =        158
+     total # of step rejections =          0
+   total # of switch detections =          3
+   total # of switch executions =          0
+
+>>>>  Wall time statistics:
+                      Sensitivity generation (IND) = 00:00.007 ( 0.01%)
+                      Integration of inhomogeneity = 00:00.000 ( 0.00%)
+                                 State integration = 00:00.000 ( 0.00%)
+                              Constraint reduction = 00:00.000 ( 0.00%)
+                                        Condensing = 00:00.001 ( 0.00%)
+                         Solution of condensed QPs = 00:00.025 ( 0.04%)
+                            Remaining calculations = 01:07.268 (99.95%)
+                                             Total = 01:07.302
+
+                                   Online graphics = 00:00.024 ( 0.04%)
+                                       Grand Total = 01:07.327
