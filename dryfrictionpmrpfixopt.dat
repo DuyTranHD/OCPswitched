@@ -1,8 +1,8 @@
-*  MUSCOD_SUITE/Apps/TEST/Src/DAT/dryfrictionpmrp.dat
-*  (c) Tran, Bao Duy, Juyl 2025 (corrected)
+*  MUSCOD_SUITE/Apps/TEST/Src/DAT/dryfrictionpmrpfixopt.dat
+*  (c) Tran, Bao Duy, June 2025 (corrected)
 *  Switched OCP with Dry Friction
 *  a point mass on a rough plane
-*  GDP & relaxation epsilon
+*  relaxation epsilon
 
 *  # of multiple shooting intervals on each model stage
 nshoot
