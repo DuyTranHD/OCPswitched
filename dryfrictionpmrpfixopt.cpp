@@ -1,7 +1,7 @@
-/*  MUSCOD_SUITE/Apps/TEST/Src/SRC/dryfrictionpmrp.cpp
- *  (c) Tran, Bao Duy, July 2025 (corrected)
+/*  MUSCOD_SUITE/Apps/TEST/Src/SRC/dryfrictionpmrpfixopt.cpp
+ *  (c) Tran, Bao Duy, June 2025 (corrected)
  *  Switched OCP with Dry Friction
- *  a point mass on a rough plane (gamma 3(w) 2.827433(w) 1.5(w) 1.047198(w) 0.78539(w) 0.314159(n) 0.031416(n))
+ *  a point mass on a rough plane
  */
 
 #include <cmath>
