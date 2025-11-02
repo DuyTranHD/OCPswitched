@@ -14,7 +14,7 @@ Loading the following libraries dynamically:
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_prsqp_den.so ... success.
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_hess_update.so ... success.
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_tchk.so ... success.
-/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_solve_tbox.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_solve_slse.so ... success.
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_cond_std.so ... success.
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_qps_qpopt.so ... success.
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mssqp_standard.so ... success.
@@ -22,81 +22,472 @@ Loading the following libraries dynamically:
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_eval_ind.so ... success.
 /home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_mintoc.so ... success.
 ./SRC/libdryfriction1fix1.so ... success.
-/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkfswt.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
+/home/tran/MUSCOD_SUITE/MC2/Debug/lib64/libmuscod_ind_rkf45.so ... success.
 *** WARNING ***
-MSSQP/check_CPInfo(): ematch_i(3)[15] has illegal value
+MSSQP/check_CPInfo(): ematch_i(18)[15] has illegal value
 (match ignored)
 *** WARNING ***
-MSSQP/check_CPInfo(): ematch_i(3)[16] has illegal value
+MSSQP/check_CPInfo(): ematch_i(18)[16] has illegal value
 (match ignored)
 *** WARNING ***
 MSSQP/ini_MSSQP(): 2 value(s) replaced/ignored in CPInfo
 
 >>>>  Dimensions of structured NLP problem:
-                   # of discretization points NDIS =         5
-                               # of variables NVAR =       166
-                    # of equality constraints NEQ  =        96 (45 + 51)
-                  # of inequality constraints NIN  =       530 (198 + 166*2)
+                   # of discretization points NDIS =        20
+                               # of variables NVAR =       481
+                    # of equality constraints NEQ  =       162 (126 + 36)
+                  # of inequality constraints NIN  =       962 (0 + 481*2)
 
 >>>>  Parameters of MSSQP method:
-                final accuracy of NLP solution ACC =  1.00E-10
-                 initial integration tolerance     =  1.00E-12
+                final accuracy of NLP solution ACC =  1.00E-07
+                 initial integration tolerance     =  1.00E-09
   # of homotopy steps in integration tolerance     =         0
-                   final integration tolerance TOL =  1.00E-12
+                   final integration tolerance TOL =  1.00E-09
     regularization factor (as multiple of ACC)     =  0.00E+00
     Levenberg Marquardt hessian regularization     =  0.00E+00
-                   maximum # of SQP iterations     =   1000000
+                   maximum # of SQP iterations     =      1000
+(no constraint relaxation)
 
 >>>>  Parameters of Hessian approximation method (BFGS update with Powell modification):
-                              initial trust radius =   6631.06
-                   initial diagonal scaling factor = 1.74135E-05
+                              initial trust radius =   331.088
+                   initial diagonal scaling factor = 0.00217975
 
 >>>>  SQP iterations
 
- it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|     trad tact         merit crit stat
-  0                   -5.000000E-09 2.68E+04
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|    alpha         merit crit stat
+  0                    0.000000E+00 3.05E+03
 
 
 ****
 **** SQP iteration 0
 ****
-  1  151 A R 9.02E+01 -5.000000E+01 3.39E+03 3.32E+03 0.00E+00 1.24E+01 2.255274E-02 1.00E+00    0 -4.783419E+01  REL SUCC
+(no constraint relaxation)
+  1   64 A   8.58E+01 -8.243935E+01 1.20E+01 2.05E+02 0.00E+00 1.78E+00 6.250000E-01 1.00E+00 -8.027760E+01  REL SUCC
 
 
 ****
 **** SQP iteration 1
 ****
 (no constraint relaxation)
-  2   12 A   4.43E-07 -5.000000E+01 4.58E+00 3.42E-01 0.00E+00 7.22E-03 5.773501E-02 1.00E+00    0 -5.000000E+01  STD SUCC
+The upper constraint bound 7 is violated by more than feasibilty tolerance: UB 368.624 - var 368.624 = 2.10321e-11
+(no constraint relaxation)
+The upper constraint bound 6 is violated by more than feasibilty tolerance: UB -12853 - var -12853 = 2.36469e-11
+The upper constraint bound 7 is violated by more than feasibilty tolerance: UB -31913.5 - var -31913.5 = -2.54659e-11
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 7844.64 - var 7844.64 = 6.36646e-12
+The upper constraint bound 9 is violated by more than feasibilty tolerance: UB -1474.01 - var -1474.01 = 2.27374e-13
+The upper constraint bound 10 is violated by more than feasibilty tolerance: UB -2732.95 - var -2732.95 = 2.72848e-12
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 820.487 - var 820.487 = 2.16005e-12
+(no constraint relaxation)
+  2  129 AP  1.98E+01 -9.233136E+01 2.21E+01 1.19E+02 0.00E+00 1.07E+01 4.634448E-01 5.00E-01 -8.129083E+01  STD SUCC
 
 
 ****
 **** SQP iteration 2
 ****
 (no constraint relaxation)
-  3    0 AP  3.98E-12 -5.000000E+01 4.13E-05 6.79E-04 0.00E+00 1.57E-06 7.608409E-06 1.00E+00    0 -5.000000E+01  STD SUCC
+(no constraint relaxation)
+(no constraint relaxation)
+RECALC_QP (1 of max 5; number of possible active bounds sd = 1, sa = 0)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var -1.85518 - LB -1.85518 = 2.36646e-11
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 1540.25 - var 1540.25 = 1.54614e-11
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 0.139289 - LB 0.139289 = 5.72209e-13
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 163.501 - var 163.501 = 6.25278e-13
+RECALC_QP (2 of max 5; number of possible active bounds sd = 2, sa = 0)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var -1.85518 - LB -1.85518 = 2.38811e-11
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 1540.25 - var 1540.25 = 1.54614e-11
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 0.139289 - LB 0.139289 = 6.71907e-13
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 163.501 - var 163.501 = 5.96856e-13
+  3  198 A   5.33E+01 -3.179630E+02 3.56E+02 4.39E+02 0.00E+00 1.98E+01 5.696102E-01 1.00E+00 -1.164820E+02  STD SUCC
+
+
+****
+**** SQP iteration 3
+****
+(no constraint relaxation)
+  4   74 AP  2.90E+02 -4.325844E+02 1.19E+03 1.51E+03 0.00E+00 2.21E+01 2.994459E+02 1.00E+00  1.459787E+02  STD SUCC
+
+
+****
+**** SQP iteration 4
+****
+(no constraint relaxation)
+  5   54 A   3.12E+01 -4.073840E+02 3.84E+01 2.64E+02 0.00E+00 1.10E+01 1.371936E+01 1.00E+00 -3.974909E+02  STD SUCC
+
+
+****
+**** SQP iteration 5
+****
+(no constraint relaxation)
+The upper constraint bound 7 is violated by more than feasibilty tolerance: UB 9.07451 - var 9.07451 = -5.28821e-12
+The upper constraint bound 10 is violated by more than feasibilty tolerance: UB 6.8256 - var 6.8256 = 9.78773e-13
+  6   78 A   4.84E+00 -4.121341E+02 1.02E+01 6.77E+01 0.00E+00 1.58E+01 9.199785E+00 1.00E+00 -4.082881E+02  STD SUCC
+
+
+****
+**** SQP iteration 6
+****
+(no constraint relaxation)
+  7   22 AP  7.42E+00 -4.195403E+02 4.29E+01 8.63E+01 0.00E+00 1.46E+01 2.020246E+02 1.00E+00 -4.164046E+02  STD SUCC
+
+
+****
+**** SQP iteration 7
+****
+(no constraint relaxation)
+The upper constraint bound 7 is violated by more than feasibilty tolerance: UB -165.222 - var -165.222 = -3.35376e-12
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB -42.106 - var -42.106 = -2.3384e-11
+The upper constraint bound 10 is violated by more than feasibilty tolerance: UB -22.1387 - var -22.1387 = -1.10134e-13
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 3.90589 - var 3.90589 = -1.4535e-12
+The lower constraint bound 20 is violated by more than feasibilty tolerance: var 0.641165 - LB 0.641165 = -3.43947e-13
+  8   57 A   4.75E-01 -4.191507E+02 8.58E+00 4.07E+01 0.00E+00 2.28E+01 2.362369E+00 1.00E+00 -4.110194E+02  STD SUCC
+
+
+****
+**** SQP iteration 8
+****
+(no constraint relaxation)
+  9   11 AP  7.73E-01 -4.199114E+02 4.60E-01 1.31E+01 0.00E+00 2.24E+01 3.288896E+02 1.00E+00 -4.195752E+02  STD SUCC
+
+
+****
+**** SQP iteration 9
+****
+(no constraint relaxation)
+
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|    alpha         merit crit stat
+ 10    8 AP  3.02E+00 -4.229326E+02 6.09E+00 3.16E+01 0.00E+00 4.99E+00 5.948900E+00 1.00E+00 -4.202318E+02  STD SUCC
+
+
+****
+**** SQP iteration 10
+****
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var -73.6665 - LB -73.6665 = -2.27374e-13
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 315.816 - var 315.816 = 0
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var -10.0735 - LB -10.0735 = -1.42109e-14
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB -3.10627 - var -3.10627 = -2.26485e-14
+(no constraint relaxation)
+The upper constraint bound 7 is violated by more than feasibilty tolerance: UB -38.3972 - var -38.3972 = -1.15818e-12
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 227.827 - var 227.827 = 4.91696e-12
+The upper constraint bound 10 is violated by more than feasibilty tolerance: UB -4.95673 - var -4.95673 = -7.10543e-15
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 9.45056 - var 9.45056 = 4.99156e-13
+ 11   78 AP  1.85E-01 -4.234314E+02 5.25E-01 2.34E+01 0.00E+00 1.94E+01 2.630806E+00 1.00E+00 -4.233220E+02  STD SUCC
+
+
+****
+**** SQP iteration 11
+****
+(no constraint relaxation)
+ 12   39 AP  5.69E-01 -4.236237E+02 6.90E-01 1.68E+01 0.00E+00 1.92E+01 2.945704E+02 1.00E+00 -4.235596E+02  STD SUCC
+
+
+****
+**** SQP iteration 12
+****
+(no constraint relaxation)
+ 13    9 AP  5.20E-01 -4.241439E+02 4.34E-01 1.38E+01 0.00E+00 1.94E+00 1.995457E+00 1.00E+00 -4.240323E+02  STD SUCC
+
+
+****
+**** SQP iteration 13
+****
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 678.581 - LB 678.581 = -7.95808e-13
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 845.502 - var 845.502 = 5.68434e-13
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 46.9456 - LB 46.9456 = -2.41585e-13
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 29.4067 - var 29.4067 = -5.32907e-14
+The lower constraint bound 20 is violated by more than feasibilty tolerance: var -30.956 - LB -30.956 = 0
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 17.4143 - LB 17.4143 = 2.76401e-12
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var -2.80448 - LB -2.80448 = -6.8292e-12
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 8.74013 - var 8.74013 = 1.8634e-12
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 1.93162 - LB 1.93162 = -3.19744e-14
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var -0.192027 - LB -0.192027 = -5.29993e-13
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB -0.421846 - var -0.421846 = -8.05633e-13
+ 14   88 AP  3.81E+00 -4.285473E+02 7.92E+00 1.20E+02 0.00E+00 2.36E+01 2.439676E+00 1.00E+00 -4.241522E+02  STD SUCC
+
+
+****
+**** SQP iteration 14
+****
+(no constraint relaxation)
+ 15   27 AP  1.10E+01 -4.388993E+02 1.53E+01 1.77E+02 0.00E+00 2.35E+01 3.647953E+02 1.00E+00 -4.353071E+02  STD SUCC
+
+
+****
+**** SQP iteration 15
+****
+(no constraint relaxation)
+ 16   27 AP  4.40E+00 -4.432678E+02 5.57E+00 2.76E+01 0.00E+00 7.26E+00 8.325104E+00 1.00E+00 -4.403705E+02  STD SUCC
+
+
+****
+**** SQP iteration 16
+****
+(no constraint relaxation)
+(no constraint relaxation)
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 107.709 - var 107.709 = -1.03739e-12
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 6.51682 - var 6.51682 = 2.39808e-14
+(no constraint relaxation)
+ 17  129 AP  2.68E+00 -4.450697E+02 3.51E+00 2.49E+01 0.00E+00 6.73E+00 1.145027E+01 6.75E-01 -4.435931E+02  STD SUCC
+
+
+****
+**** SQP iteration 17
+****
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 2313.47 - LB 2313.47 = -2.27374e-12
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 27.6099 - var 27.6099 = 1.13687e-13
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 200.307 - LB 200.307 = -5.68434e-14
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB -1.37007 - var -1.37007 = -6.66134e-16
+(no constraint relaxation)
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 69.3577 - LB 69.3577 = 2.51532e-12
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 4.82792 - LB 4.82792 = 3.45501e-13
+ 18  122 AP  4.82E+00 -4.716795E+02 3.06E+01 3.53E+01 0.00E+00 1.40E+01 3.452447E+00 1.00E+00 -4.643297E+02  STD SUCC
+
+
+****
+**** SQP iteration 18
+****
+(no constraint relaxation)
+ 19   51 AP  1.82E+01 -4.678212E+02 5.46E+01 1.43E+02 0.00E+00 1.52E+01 2.040831E+02 1.00E+00 -4.536667E+02  STD SUCC
+
+
+****
+**** SQP iteration 19
+****
+(no constraint relaxation)
+
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|    alpha         merit crit stat
+ 20   17 AP  2.81E+00 -4.705640E+02 1.26E+00 2.17E+01 0.00E+00 1.72E+01 8.566152E+00 1.00E+00 -4.704227E+02  STD SUCC
+
+
+****
+**** SQP iteration 20
+****
+(no constraint relaxation)
+ 21   11 AP  5.64E-01 -4.711268E+02 2.08E-01 1.71E+01 0.00E+00 1.52E+00 3.450135E+00 1.00E+00 -4.710921E+02  STD SUCC
+
+
+****
+**** SQP iteration 21
+****
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 186.554 - LB 186.554 = -5.40012e-13
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 63.1872 - var 63.1872 = -2.20268e-13
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 16.9234 - LB 16.9234 = -1.77636e-14
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 4.39758 - var 4.39758 = 8.88178e-15
+The lower constraint bound 21 is violated by more than feasibilty tolerance: var -1.93988 - LB -1.93988 = 1.11022e-15
+(no constraint relaxation)
+ 22   45 AP  3.21E-02 -4.724276E+02 3.47E-01 5.33E-01 0.00E+00 2.76E+00 2.000573E+00 1.00E+00 -4.723705E+02  STD SUCC
+
+
+****
+**** SQP iteration 22
+****
+(no constraint relaxation)
+ 23    6 AP  1.34E+00 -4.724849E+02 1.01E+01 1.27E+01 0.00E+00 2.29E+00 7.533510E-01 1.00E+00 -4.707138E+02  STD SUCC
+
+
+****
+**** SQP iteration 23
+****
+(no constraint relaxation)
+ 24    7 AP  6.13E-02 -4.725317E+02 1.07E-02 9.96E-01 0.00E+00 2.18E+00 1.438232E+00 1.00E+00 -4.725297E+02  STD SUCC
+
+
+****
+**** SQP iteration 24
+****
+(no constraint relaxation)
+ 25    2 AP  1.30E-02 -4.725447E+02 4.18E-02 2.22E+00 0.00E+00 1.05E-01 7.630419E-01 1.00E+00 -4.725365E+02  STD SUCC
+
+
+****
+**** SQP iteration 25
+****
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 3.02133 - LB 3.02133 = 2.66454e-15
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 4.78837 - LB 4.78837 = -1.15463e-14
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 44.1324 - var 44.1324 = -1.42109e-14
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 0.338908 - LB 0.338908 = 8.32667e-16
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 0.0354622 - LB 0.0354622 = -6.245e-16
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 0.166825 - LB 0.166825 = 5.41373e-13
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 0.18658 - LB 0.18658 = -5.42372e-13
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 1.9089 - var 1.9089 = 2.14029e-12
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 0.0220771 - LB 0.0220771 = 9.56492e-14
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 0.00338059 - LB 0.00338059 = -3.04075e-14
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 0.119462 - var 0.119462 = 1.147e-13
+RECALC_QP (1 of max 5; number of possible active bounds sd = 7, sa = 0)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 0.166825 - LB 0.166825 = -3.15803e-13
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 0.18658 - LB 0.18658 = -3.93574e-13
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 1.9089 - var 1.9089 = -1.85518e-12
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 0.0220771 - LB 0.0220771 = 7.02841e-14
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 0.00338059 - LB 0.00338059 = 2.36793e-13
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 0.119462 - var 0.119462 = -1.18336e-13
+The lower constraint bound 22 is violated by more than feasibilty tolerance: var -0.0618671 - LB -0.0618671 = -3.13638e-15
+ 26   91 A   1.31E-02 -4.725668E+02 5.17E-02 1.67E+01 0.00E+00 3.02E+01 8.089857E-01 1.00E+00 -4.725636E+02  STD SUCC
+
+
+****
+**** SQP iteration 26
+****
+(no constraint relaxation)
+ 27   27 AP  1.33E-02 -4.725699E+02 1.23E-05 1.04E-01 0.00E+00 3.01E+01 4.796575E+02 1.00E+00 -4.725699E+02  STD SUCC
+
+
+****
+**** SQP iteration 27
+****
+(no constraint relaxation)
+ 28    2 AP  9.13E-05 -4.725700E+02 3.35E-04 3.66E-01 0.00E+00 2.37E-02 1.672140E+00 1.00E+00 -4.725700E+02  STD SUCC
+
+
+****
+**** SQP iteration 28
+****
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 0.0292899 - LB 0.0292899 = 4.16334e-17
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 0.0295874 - LB 0.0295874 = -5.55112e-17
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 0.214228 - var 0.214228 = 5.55112e-17
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 0.006426 - LB 0.006426 = 9.54098e-18
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 0.000183394 - LB 0.000183394 = 9.73071e-18
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB 0.0104059 - var 0.0104059 = 1.56125e-17
+(no constraint relaxation)
+ 29   33 AP  8.73E-05 -4.725701E+02 3.35E-03 1.47E+00 0.00E+00 2.42E+00 1.671066E+00 3.99E-01 -4.725700E+02  STD SUCC
+
+
+****
+**** SQP iteration 29
+****
+(no constraint relaxation)
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 0.00126197 - LB 0.00126197 = -8.1146e-15
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 0.00445211 - LB 0.00445211 = -6.61728e-14
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB 0.00793147 - var 0.00793147 = 1.66551e-14
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var 0.000236825 - LB 0.000236825 = -5.77367e-15
+
+ it qpit qpf   kkttol          sobj   |sinf|  |vstep|  |vstpr| |mulstp|       |lgrd|    alpha         merit crit stat
+ 30   23 AP  1.15E-04 -4.725702E+02 2.92E-06 8.82E-01 0.00E+00 2.35E+01 7.457743E-01 1.00E+00 -4.725702E+02  STD SUCC
+
+
+****
+**** SQP iteration 30
+****
+(no constraint relaxation)
+ 31    8 AP  1.32E-05 -4.725702E+02 2.02E-05 1.02E-03 0.00E+00 2.35E+01 3.918938E+02 1.00E+00 -4.725702E+02  STD SUCC
+
+
+****
+**** SQP iteration 31
+****
+(no constraint relaxation)
+The upper constraint bound 7 is violated by more than feasibilty tolerance: UB -1.25381e-08 - var -1.25381e-08 = -5.63072e-17
+The upper constraint bound 10 is violated by more than feasibilty tolerance: UB -2.02199e-05 - var -2.02199e-05 = -7.7656e-18
+*** WARNING ***
+SOLVE_SLSE/solve_subp(): uphill search direction for Powell's merit function
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 1.54375e-08 - LB 1.54375e-08 = -4.0402e-18
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var -1.25381e-08 - LB -1.25381e-08 = 1.1406e-16
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB -5.03917e-08 - var -5.03917e-08 = 6.75399e-17
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 3.95654e-09 - LB 3.95654e-09 = -2.13999e-18
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var -2.02199e-05 - LB -2.02199e-05 = 7.12524e-18
+ 32   22 AP  9.27E-07 -4.725702E+02 1.86E-05 7.99E-05 0.00E+00 2.35E+01 7.460517E-01 1.25E-01 -4.725702E+02  STD SUCC
+
+
+****
+**** SQP iteration 32
+****
+(no constraint relaxation)
+*** WARNING ***
+SOLVE_SLSE/solve_subp(): uphill search direction for Powell's merit function
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 1.10021e-06 - LB 1.10021e-06 = 1.83298e-18
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 6.88553e-06 - LB 6.88553e-06 = 3.46098e-18
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB -1.7973e-07 - var -1.7973e-07 = 1.3934e-16
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 8.4119e-08 - LB 8.4119e-08 = -7.52933e-20
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var -1.72142e-05 - LB -1.72142e-05 = -1.25361e-19
+ 33   29 AP  7.22E-07 -4.725702E+02 1.86E-05 4.96E-05 0.00E+00 2.41E+00 3.918938E+02 6.25E-02 -4.725702E+02  STD SUCC
+
+
+****
+**** SQP iteration 33
+****
+(no constraint relaxation)
+*** WARNING ***
+SOLVE_SLSE/solve_subp(): uphill search direction for Powell's merit function
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 1.60514e-06 - LB 1.60514e-06 = 1.49372e-16
+The upper constraint bound 7 is violated by more than feasibilty tolerance: UB 9.42761e-06 - var 9.42761e-06 = 4.67054e-17
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB -2.26698e-07 - var -2.26698e-07 = -5.09354e-15
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 1.21508e-07 - LB 1.21508e-07 = -2.30658e-19
+The upper constraint bound 10 is violated by more than feasibilty tolerance: UB -1.59374e-05 - var -1.59374e-05 = -6.28837e-18
+ 34   31 AP  5.04E-07 -4.725702E+02 2.65E-05 1.76E-03 0.00E+00 3.88E-04 3.917971E+02 5.00E-01 -4.725702E+02  STD SUCC
+
+
+****
+**** SQP iteration 34
+****
+(no constraint relaxation)
+*** WARNING ***
+SOLVE_SLSE/solve_subp(): uphill search direction for Powell's merit function
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 6 is violated by more than feasibilty tolerance: var 9.58724e-06 - LB 9.58724e-06 = 5.20417e-18
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var -2.15108e-05 - LB -2.15108e-05 = 1.88854e-17
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB -4.97264e-07 - var -4.97264e-07 = -5.47778e-16
+The lower constraint bound 9 is violated by more than feasibilty tolerance: var 6.8265e-07 - LB 6.8265e-07 = 7.12778e-19
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var -1.21745e-05 - LB -1.21745e-05 = 1.67204e-18
+ 35   32 AP  6.71E-07 -4.725702E+02 1.27E-05 1.63E-04 0.00E+00 3.87E-04 3.917972E+02 4.50E-01 -4.725702E+02  STD SUCC
+
+
+****
+**** SQP iteration 35
+****
+(no constraint relaxation)
+*** WARNING ***
+SOLVE_SLSE/solve_subp(): uphill search direction for Powell's merit function
+(no constraint relaxation)
+(no constraint relaxation)
+The lower constraint bound 7 is violated by more than feasibilty tolerance: var 2.07393e-06 - LB 2.07393e-06 = 6.98189e-16
+The upper constraint bound 8 is violated by more than feasibilty tolerance: UB -5.42227e-07 - var -5.42227e-07 = 4.70736e-15
+The lower constraint bound 10 is violated by more than feasibilty tolerance: var -5.79252e-06 - LB -5.79252e-06 = 3.6796e-17
+The upper constraint bound 11 is violated by more than feasibilty tolerance: UB -5.90299e-08 - var -5.90299e-08 = -1.75033e-16
+The lower constraint bound 22 is violated by more than feasibilty tolerance: var -1.28608e-07 - LB -1.84788e-09 = -1.2676e-07
+ 36   32 AP  9.62E-08 -4.725702E+02 1.35E-05 3.00E-03 0.00E+00 1.47E+01 3.917976E+02 3.12E-02 -4.725702E+02  STD SUCC
 
 ****  convergence achieved  ****
 
-
-
->>>>  operation counts for ODE solver RKF45SWT:
-
-total # of function evaluations =      22692
-   total # of integration steps =        158
-     total # of step rejections =          0
-   total # of switch detections =          3
-   total # of switch executions =          0
+>>>>  Operation counts for ODE solver RKF45S:
+                   total # of function evaluations =    119721
+                      total # of integration steps =      2319
+                         total # of rejected steps =         0
 
 >>>>  Wall time statistics:
-                      Sensitivity generation (IND) = 00:00.007 ( 0.01%)
+                      Sensitivity generation (IND) = 00:00.016 ( 0.32%)
                       Integration of inhomogeneity = 00:00.000 ( 0.00%)
-                                 State integration = 00:00.000 ( 0.00%)
-                              Constraint reduction = 00:00.000 ( 0.00%)
-                                        Condensing = 00:00.001 ( 0.00%)
-                         Solution of condensed QPs = 00:00.025 ( 0.04%)
-                            Remaining calculations = 01:07.268 (99.95%)
-                                             Total = 01:07.302
+                                 State integration = 00:00.003 ( 0.07%)
+                              Constraint reduction = 00:00.001 ( 0.02%)
+                                        Condensing = 00:00.250 ( 5.11%)
+                         Solution of condensed QPs = 00:04.601 (94.06%)
+                            Remaining calculations = 00:00.020 ( 0.42%)
+                                             Total = 00:04.892
 
-                                   Online graphics = 00:00.024 ( 0.04%)
-                                       Grand Total = 01:07.327
+                                   Online graphics = 00:00.852 (14.83%)
+                                       Grand Total = 00:05.743
